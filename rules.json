@@ -1,0 +1,23 @@
+{
+  "last_synced": "2026-03-18T20:08:00",
+  "rules": [
+    {
+      "id": "R-20260317-01",
+      "symptom": "Gemini 2.0 Flash '跳步' (Skipping steps) in complex dependency chains.",
+      "constraint": "For tasks affecting >1 component, MUST draw [Full-Chain] dependency graph and verify each component with cat/grep before editing.",
+      "severity": "CRITICAL"
+    },
+    {
+      "id": "R-20260318-01",
+      "symptom": "Soft-Confidence / Logical Hallucination during deep refactoring.",
+      "constraint": "MUST execute PB-Red-Team-Audit's Adversarial-Three-Attack protocol before implementation.",
+      "severity": "HIGH"
+    },
+    {
+      "id": "R-20260318-02",
+      "symptom": "3Flash Semantic Bleaching in long context (>15k tokens).",
+      "constraint": "MUST execute PB-Vanguard-Optimization's SFM (Symbolic-First Manifest) and PGE (Pulse-Guided Execution) protocols to maintain 3.1Pro-level coherence.",
+      "severity": "CRITICAL"
+    }
+  ]
+}

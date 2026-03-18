@@ -1,0 +1,39 @@
+{
+  "protocol": "Viking-Sovereign-Index v1.0",
+  "root": "memory/shared/",
+  "layers": {
+    "L0": "L0 provides minimal 1-sentence abstracts for rapid specialist selection.",
+    "L1": "L1 provides full playbook/skill metadata for architectural planning.",
+    "L2": "L2 refers to full content raw access."
+  },
+  "catalogue": {
+    "playbooks/PB-PUA-Methodology.md": {
+      "L0": "High-agency expert persona and Iron Laws.",
+      "L1": "Focus on PUA methodology, ownership, and zero-hallucination protocols."
+    },
+    "playbooks/PB-Symbolic-Optimization.md": {
+      "L0": "GitNexus-driven token pruning protocol.",
+      "L1": "3-Tier (Core/Impact/Signature) context strategy for 70%+ token saving."
+    },
+    "playbooks/PB-Chain-Reasoning.md": {
+      "L0": "Multi-step logic verification for complex engineering.",
+      "L1": "Triggered on 2+ errors; forces explicit thought DAGs before coding."
+    },
+    "pitfalls/PF-001-Codebase-Amnesia.md": {
+      "L0": "Avoid guessing file paths without GitNexus.",
+      "L1": "Mitigate terminal-trial-and-error hallucinations using GitNexus Relational Shield."
+    },
+    "knowledge/openclaw-architecture.md": {
+      "L0": "OpenClaw engine and multi-platform architecture map.",
+      "L1": "Details on Feishu/Discord integrations and core event-loop."
+    },
+    "knowledge/openviking-core.md": {
+      "L0": "Viking-Fusion v1.9.0 core logic (AST/Retriever/FS).",
+      "L1": "Hierarchical context protocol, sector awareness, and symbol-level pruning."
+    },
+    "knowledge/cdp-bridge-multiplexing.md": {
+      "L0": "CDP 9222/9333 conflict resolution.",
+      "L1": "Details on cdp_multiplexer.js and browser_operator.js silent mode."
+    }
+  }
+}

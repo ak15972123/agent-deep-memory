@@ -8,7 +8,8 @@
   },
   "scripts": {
     "mcp": "node mcp/server.js",
-    "validate": "node cli/agent-memory.js validate"
+    "validate": "node cli/agent-memory.js validate",
+    "test": "node --test test/test.js"
   },
   "files": [
     "cli/",
@@ -30,6 +31,15 @@
     "README.md",
     "LICENSE"
   ],
-  "keywords": ["ai", "agent", "memory", "mcp", "codex", "llm"],
-  "engines": { "node": ">=18" }
+  "keywords": [
+    "ai",
+    "agent",
+    "memory",
+    "mcp",
+    "codex",
+    "llm"
+  ],
+  "engines": {
+    "node": ">=18"
+  }
 }

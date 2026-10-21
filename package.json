@@ -1,0 +1,35 @@
+{
+  "name": "agent-deep-memory",
+  "version": "0.1.0",
+  "description": "Model-agnostic, plain-text memory substrate for AI coding agents",
+  "license": "MIT",
+  "bin": {
+    "agent-memory": "./cli/agent-memory.js"
+  },
+  "scripts": {
+    "mcp": "node mcp/server.js",
+    "validate": "node cli/agent-memory.js validate"
+  },
+  "files": [
+    "cli/",
+    "mcp/",
+    "runtime/",
+    "playbooks/",
+    "specialists/",
+    "patterns/",
+    "pitfalls/",
+    "skills/",
+    "knowledge/",
+    "CONSTITUTION.md",
+    "IDENTITY.md",
+    "MEMORY.md",
+    "PREFERENCES.md",
+    "CURRENT_STATE.md",
+    "rules.json",
+    "viking_index.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": ["ai", "agent", "memory", "mcp", "codex", "llm"],
+  "engines": { "node": ">=18" }
+}

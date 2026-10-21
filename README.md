@@ -95,9 +95,23 @@ These are deliberate, and they explain most of the architecture:
 
 ## Status
 
-Early but real. The memory structure, playbooks, and specialist library are in use daily. The runtime helpers and MCP integration are the current focus.
+Working. The memory structure, playbooks, specialist library, CLI, and MCP
+server are all in use. 13 tests pass on Node 18+ with no dependencies.
 
-See [`CURRENT_STATE.md`](CURRENT_STATE.md) for what works today and what doesn't.
+See [`CURRENT_STATE.md`](CURRENT_STATE.md) for what works today and what
+doesn't.
+
+## Documentation
+
+| Document | What it covers |
+|---|---|
+| [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) | Layer responsibilities, the plain-text tradeoff, what is deliberately absent |
+| [`docs/CODEX-INTEGRATION.md`](docs/CODEX-INTEGRATION.md) | Codex CLI, IDE, and cloud setup |
+| [`examples/quickstart.sh`](examples/quickstart.sh) | Bootstrap a memory root in one command |
+| [`examples/codex-setup.md`](examples/codex-setup.md) | Register the MCP server with Codex |
+| [`examples/claude-code-setup.md`](examples/claude-code-setup.md) | Register with Claude Code or Cursor |
+| [`CONTRIBUTING.md`](CONTRIBUTING.md) | Constraints worth knowing before writing code |
+| [`CHANGELOG.md`](CHANGELOG.md) | Release history and known limitations |
 
 ## Roadmap
 
@@ -106,10 +120,12 @@ See [`CURRENT_STATE.md`](CURRENT_STATE.md) for what works today and what doesn't
 - [x] Specialist library (141 roles, 13 disciplines)
 - [x] Pitfall and pattern registries
 - [x] Runtime watchdog
-- [ ] MCP server — expose memory as tools to any MCP client (Codex, Claude, Cursor)
-- [ ] CLI — `agent-memory add`, `search`, `prune`, `validate`
+- [x] MCP server — memory as tools for Codex, Claude Code, Cursor, Zed
+- [x] CLI — `list`, `search`, `add`, `read`, `validate`
+- [x] Validation test suite (13 tests, zero dependencies)
+- [x] Quickstart and per-client setup guides
 - [ ] Session bootstrap — auto-inject relevant memory at conversation start
-- [ ] Validation test suite
+- [ ] Concurrent-write protection for shared memory roots
 
 ## License
 

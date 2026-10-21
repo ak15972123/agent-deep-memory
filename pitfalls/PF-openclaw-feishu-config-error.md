@@ -1,7 +1,7 @@
 # 陷阱卡：OpenClaw 飞书配置文件参数错位 (AppID/AppSecret 置换)
 **Pattern-Key**: `openclaw-feishu-config-swapped`
 **时间**: 2026-03-05
-**环境**: Windows 11 + `.openclaw`
+**环境**: Windows 11 + `~/.openclaw`
 **复现次数**: 1
 
 ## 💥 错误表象
@@ -11,7 +11,7 @@
 3. `[ws] Cannot read properties of undefined (reading 'PingInterval')`
 
 ## 🔍 根因诊断 (Root Cause)
-经过对 `C:\Users\Administrator\.openclaw\openclaw.json` 配置文件的排查，发现 **致命的低级配置错误：`appId` 和 `appSecret` 的值填反了**。
+经过对 `~/.openclaw\openclaw.json` 配置文件的排查，发现 **致命的低级配置错误：`appId` 和 `appSecret` 的值填反了**。
 
 在 `openclaw.json` 的 `channels.feishu` 节点中：
 ```json
@@ -26,7 +26,7 @@
 
 ## 💡 规避与正解 (Solution)
 **手工修复方案**：
-停止 OpenClaw，打开 `C:\Users\Administrator\.openclaw\openclaw.json`，将两者纠正：
+停止 OpenClaw，打开 `~/.openclaw\openclaw.json`，将两者纠正：
 ```json
 "appId": "cli_a92b23588538dcee",
 "appSecret": "V1r02XxqIQsXEw10yWsipemotXFrZCX5"

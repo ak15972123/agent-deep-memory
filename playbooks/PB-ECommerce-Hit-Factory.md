@@ -15,7 +15,7 @@
 
 ### Phase 2: 双核思考注入 (Dual-Core Inference via Hybrid Gateway)
 1. 挂载电商基准 NotebookLM 库（基于用户提供的 URL）。
-2. 执行任意重度逆向工程（Reverse-Prompting）前，Flash **必须** 优先通过 `node .gemini/infra/S_ST/notebooklm-hybrid-mcp.js` 脚本调用 API 第一引擎提问：
+2. 执行任意重度逆向工程（Reverse-Prompting）前，Flash **必须** 优先通过 `node ~/.agent-memory/runtime/notebooklm-hybrid-mcp.js` 脚本调用 API 第一引擎提问：
    * “当前待分析商品的最高频用户痛点是什么？”
    * “基于已挂载的对标爆款，提取前 3 个最核心的情绪价值点。”
 3. **[熔断兜底]**: 如果混合网关返回 `[HYBRID_FALLBACK_SIGNAL]` 抛锚失败（例如环境包缺失或 Google 端点失效），Flash **必须无缝回滚**，调用原生 `mcp_notebooklm_ask_question` 工具用无头浏览器进行物理 DOM 接管。

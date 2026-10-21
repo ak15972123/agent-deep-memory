@@ -1,23 +1,44 @@
-# 🧠 长期记忆精华
+# Memory
 
-> 硬上限：≤80 行 / ≤5KB。超限时在月度精炼中裁剪。
-> 每条记忆标注来源和时间，关键记忆需用户确认。
+Durable facts and decisions. Append-only — a correction is a new entry that
+supersedes an old one, both visible.
+
+Keep this file under ~80 lines. When it grows past that, the fix is to move a
+topic into its own file and leave a pointer, not to trim the history.
+
+Entry format:
+
+```
+- YYYY-MM-DD: the fact or decision
+  - Why: the reasoning, if it is not obvious
+```
 
 ---
 
-## 用户环境
-- 🔴 P0 | OS: Windows 11 (已彻底弃用 WSL2 方案) | 2026-03-05 | ✅ 用户确认
-- 🔴 P0 | IDE: Antigravity (Google) | 2026-03-02 | ✅ 用户确认
-- 🔴 P0 | OpenClaw 核心路径变更为本机 `C:\Users\Administrator\.openclaw`，拥有系统默认最高授权 | 2026-03-05 | ✅ 用户确认
+## Environment
 
-## 核心决策
-- 🔴 P0 | 记忆体系采用纯 Markdown+JSON，不引入任何外部数据库 | 2026-02-28
-- 🔴 P0 | 记忆围绕"角色"组织，不围绕"账号" | 2026-02-28
-- 🔴 P0 | 完整设计方案见 CONSTITUTION.md（36 项考量）| 2026-02-28
-- 🔴 P0 | 升级至 v2.0 PageIndex Fusion 架构。解决 3 月中旬由于 Token 紧缩导致的上下文失忆问题。| 2026-03-17
+<!-- Replace these with your own. They are examples, not defaults. -->
 
-## 技术知识
-- （随使用积累）
+- 2026-01-01: Primary OS is Linux; the agent runs on the same machine as the editor.
+- 2026-01-01: Editor is VS Code. Terminal is the system shell, not an embedded one.
 
-## 工作习惯
-- 🔴 P0 | 采用 Hierarchical Reasoning-based RAG (PageIndex)。凡是超过 50KB 知识文档必须优先检索 Tree 索引。| 2026-03-17
+## Decisions
+
+- 2026-01-01: Memory is plain Markdown and JSON, no external database.
+  - Why: it has to survive the tool that wrote it. A file outlives a schema.
+- 2026-01-01: Memory is organised by role, not by account.
+  - Why: switching accounts should not change who the agent is.
+- 2026-01-01: Corrections supersede, they do not overwrite.
+  - Why: if memory can be silently rewritten, a wrong entry can replace a right
+    one and nothing surfaces the change.
+
+## Technical knowledge
+
+<!-- Accumulates as you work. Keep entries short and specific. -->
+
+- (nothing yet)
+
+## Working habits
+
+- 2026-01-01: Record a correction the moment it happens; a preference stated
+  once and not written down will be re-learned next session.

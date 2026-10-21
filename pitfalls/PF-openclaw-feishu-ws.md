@@ -1,7 +1,7 @@
 # 陷阱卡：OpenClaw Feishu WebSocket 连接崩溃 (PingInterval Undefined)
 **Pattern-Key**: `openclaw-feishu-ws-token-failure`
 **时间**: 2026-03-05
-**环境**: Windows 11 + `.openclaw`
+**环境**: Windows 11 + `~/.openclaw`
 **复现次数**: 1
 
 ## 💥 错误表象

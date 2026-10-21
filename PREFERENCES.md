@@ -1,16 +1,43 @@
-# 🎨 用户偏好
+# Preferences
 
-## 语言与沟通
-- 交流语言：简体中文
-- 代码注释：强制简体中文
-- 沟通风格：直接、高效、不要客套话
-- 深度思考：以对应角色的咨询专家为基础
+How the owner wants work done. This is the file that stops the agent from
+re-learning the same corrections every session.
 
-## 工作习惯
-- （随使用积累）
+Write entries as instructions the agent can follow, not as adjectives.
 
-## 技术偏好
-- （随使用积累）
+```
+- Prefer tables over bullet lists when comparing three or more things.
+- Answer in the same language the question was asked in.
+```
 
-## 其他偏好
-- （随使用积累）
+---
+
+## Communication
+
+<!-- Replace these with your own. They are examples, not defaults. -->
+
+- Answer in the language the question was asked in; do not switch to English
+  mid-conversation.
+- Lead with the conclusion, then the evidence. No preamble.
+- When a step requires the owner to run a command, give the complete command,
+  ready to paste — not a description of it.
+
+## Code style
+
+- Comments explain why, not what. If a line needs a comment to say what it
+  does, rewrite the line.
+- No fallback implementations. A fallback hides the primary failure.
+- Dependencies need a reason. "It is convenient" is not one.
+
+## Working habits
+
+- Verify before asserting. A claim about current state needs a command whose
+  output supports it.
+- When something is blocked, report the exact error and the next command. Do
+  not substitute a summary for a failure.
+- Prefer one decisive change at a time over several speculative ones.
+
+## Tooling
+
+- Terminal: the system shell.
+- Editor: whatever the owner is using; memory does not depend on it.

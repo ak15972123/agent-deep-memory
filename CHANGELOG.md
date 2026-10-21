@@ -1,5 +1,32 @@
 # Changelog
 
+## 0.1.1 — 2026-10-21
+
+Privacy and portability pass. The repository was assembled from two private
+repositories, and the seed files carried real installation details that do not
+belong in a public project.
+
+### Changed
+
+- **`MEMORY.md`, `IDENTITY.md`, `PREFERENCES.md`** rewritten as templates. The
+  originals named a specific Windows user, listed absolute paths to a local tool
+  installation, and described that installation as having the highest system
+  authorization. None of that is useful to a reader and all of it was public.
+- **`CURRENT_STATE.md`** rewritten. The original was internal project jargon
+  (codename protocols, an engine version, and a claim about a private backup of
+  a repository that is now public) — unreadable to anyone outside the project
+  and inaccurate about the current state.
+- **`skills/agency-inventory.json`** — 141 entries carried absolute Windows
+  paths (`C:\Users\...\.gemini\memory\shared\skills\...`). All rewritten as
+  paths relative to the memory root.
+- **Playbooks and pitfalls** — remaining `.gemini/` and `C:\Users\...`
+  references replaced with `~/.agent-memory/` and `~/.openclaw`.
+
+### Removed
+
+- `watchdog.js` at the repository root — a stale 143-line copy superseded by
+  `runtime/watchdog.js` (152 lines), still pointing at the old Windows path.
+
 ## 0.1.0 — 2026-10-21
 
 First public release. The repository was assembled from two prior internal

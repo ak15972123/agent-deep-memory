@@ -11,7 +11,7 @@
 ## 🛠️ 第一阶段：分散并行执行 (Pulse Generation)
 每个 Agent 在独立执行原子任务时，必须遵守“脉搏落盘”协议：
 
-1.  **初始化脉搏**：在主控分配任务后，立即在 `.gemini/memory/state/agents/` 下创建 `{agent_id}.pulse.json`。
+1.  **初始化脉搏**：在主控分配任务后，立即在 `~/.agent-memory/state/agents/` 下创建 `{agent_id}.pulse.json`。
 2.  **实时状态上报 (Interval)**：
     - 在每次 `replace_file_content` 或 `run_command` 完成后，同步更新 `pulse.json` 的 `status`、`current_step` 与 `impacted_symbols`。
 3.  **成果证据沉积**：

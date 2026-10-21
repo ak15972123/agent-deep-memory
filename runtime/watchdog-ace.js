@@ -124,7 +124,7 @@ function cooldownDecision(lastError = null) {
 
     const decision = fallbackPlugin.resolveCooldownDecision({
         currentTokens: currentContext,
-        modelName: "gemini-2.0-flash",
+        modelName: "default-model",
         lastErrorType: lastError
     });
 

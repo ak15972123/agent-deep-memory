@@ -1,6 +1,6 @@
 /**
  * 🛠️ CDP-Multiplexer v1.0
- * 兼容性桥接器：将 Antigravity 的 CDP (9333) 镜像到标准 CDP 端口 (9222)，
+ * 兼容性桥接器：将 浏览器的 CDP (9333) 镜像到标准 CDP 端口 (9222)，
  * 并支持多客户端（AutoAccept + Agent）流量并发。
  */
 

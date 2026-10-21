@@ -8,7 +8,7 @@ const path = require('path');
 const { execSync } = require('child_process');
 const http = require('http');
 
-const BASE_DIR = 'C:\\Users\\Administrator\\.gemini';
+const BASE_DIR = '~/.agent-memory';
 const S_AG_DIR = path.join(BASE_DIR, 'S_AG');
 const MEMORY_DIR = path.join(BASE_DIR, 'memory');
 const VIZ_PATH = path.join(MEMORY_DIR, 'state', 'context-viz.json');

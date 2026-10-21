@@ -13,7 +13,7 @@ const VikingDeepBridge = require('./viking_deepbridge');
 // Viking 内存编排器 (Memory Orchestrator)
 // ==========================================
 class VikingNexus {
-    static INDEX_PATH = 'C:\\Users\\Administrator\\.gemini\\memory\\shared\\viking_index.json';
+    static INDEX_PATH = '~/.agent-memory\\viking_index.json';
     
     /**
      * L0 级快速扫描：根据目标决定最有价值的 2 个 Playbook
@@ -25,7 +25,7 @@ class VikingNexus {
             const l1 = index.catalogue[pPath].L1.toLowerCase();
             return taskDesc.toLowerCase().split(' ').some(word => l1.includes(word));
         });
-        return matches.slice(0, 2).map(p => path.join('C:\\Users\\Administrator\\.gemini\\memory\\shared', p));
+        return matches.slice(0, 2).map(p => path.join('~/.agent-memory', p));
     }
 }
 
@@ -33,7 +33,7 @@ class VikingNexus {
 // GitNexus 降噪扩展 (Hierarchical Context)
 // ==========================================
 class NexusTool {
-    static GITNEXUS_BIN = 'node C:\\Users\\Administrator\\.gemini\\GitNexus-main\\gitnexus\\dist\\cli\\index.js';
+    static GITNEXUS_BIN = 'node ~/.agent-memory\\GitNexus-main\\gitnexus\\dist\\cli\\index.js';
     
     static run(cmd, args, repoName = 'memory') {
         try {
@@ -85,7 +85,7 @@ class ContextFolder {
             const names = targetFiles.map(f => path.basename(f));
             const impactRaw = NexusTool.run('impact', [names[0], '--direction', 'upstream'], 'memory');
             const paths = [...impactRaw.matchAll(/[a-zA-Z0-9_/\\-]+\.(?:js|ts|py|go)/g)].map(m => m[0]);
-            context += `\n\n--- RELATIONAL IMPACT (L1) ---\n${paths.slice(0, 3).map(p => this.loadWithPruning(path.join('c:\\Users\\Administrator\\.gemini\\memory', p), 'folded')).join('\n')}`;
+            context += `\n\n--- RELATIONAL IMPACT (L1) ---\n${paths.slice(0, 3).map(p => this.loadWithPruning(path.join('~/.agent-memory', p), 'folded')).join('\n')}`;
         }
 
         return context;

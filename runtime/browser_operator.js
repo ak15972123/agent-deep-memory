@@ -1,6 +1,6 @@
 /**
  * 🕵️ Browser-Operator v1.0 (Expert Edition)
- * 直接通过 CDP 协议操作 Antigravity 浏览器，避开 broken 的子代理工具。
+ * 直接通过 CDP 协议操作 浏览器，避开 broken 的子代理工具。
  * 兼容性：完美适配 9333 端口上的 AutoAccept 实例。
  */
 
@@ -39,7 +39,7 @@ async function runCommand(url, task) {
         ws.on('message', async (data) => {
             const msg = JSON.parse(data);
             
-            // 捕获 Target 创建事件 (通常 Antigravity 已经有页面了)
+            // 捕获 Target 创建事件 (通常 浏览器已经有页面了)
             if (msg.method === 'Target.targetCreated' && msg.params.targetInfo.type === 'page') {
                 const targetId = msg.params.targetInfo.targetId;
                 ws.send(JSON.stringify({ id: id++, method: 'Target.attachToTarget', params: { targetId, flatten: true } }));

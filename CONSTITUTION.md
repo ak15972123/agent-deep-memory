@@ -9,19 +9,19 @@
 ## 第一章：设计背景与约束
 
 ### 1.1 项目目标
-为 Administrator 构建一套**主权记忆体系（Sovereign Memory）**——记忆属于用户，不属于任何 IDE/模型/账号。
+构建一套**主权记忆体系（Sovereign Memory）**——记忆属于用户，不属于任何 IDE/模型/账号。
 
 ### 1.2 硬性约束
 
 | 约束 | 具体要求 |
 |------|----------|
-| IDE | 当前仅 Antigravity（Google） |
-| 模型 | 多模型切换（Claude/GPT/Gemini/Qwen 等） |
-| 账号 | 6 个账号轮换（额度限制） |
+| IDE | 任意（Codex CLI / Claude Code / Cursor / Gemini CLI / 自建） |
+| 模型 | 多模型切换（Claude/GPT-Codex/Gemini/Qwen 等） |
+| 账号 | 多账号轮换（额度限制） |
 | 并发 | 可能 2-3 个智能体同时 work |
 | 格式 | 纯 Markdown + JSON，零外部依赖 |
 | 安全 | 不存储明文敏感信息，不依赖云服务 |
-| 位置 | `C:\Users\Administrator\.gemini\memory\` |
+| 位置 | `~/.agent-memory/`（可配置） |
 
 ### 1.3 核心原则
 1. **记忆属于用户**：任何 IDE、模型、账号都只是"访客"
